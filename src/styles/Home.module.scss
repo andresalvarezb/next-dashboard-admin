@@ -1,0 +1,5 @@
+@use 'variable';
+
+h1 {
+    color: variable.$primaryColor;
+}
