@@ -1,0 +1,34 @@
+@use 'variables';
+@use 'mixins';
+
+.Header {
+	background-color: variables.$color-3;
+	color: #fff;
+	font-size: 1.6rem;
+	padding: 1rem 2rem;
+
+	header {
+		@include mixins.flex($justify: space-between, $align: center);
+		nav {
+			@include mixins.flex($justify: center);
+			gap: 4rem;
+		}
+
+		nav > a {
+			cursor: pointer;
+		}
+	}
+}
+
+.Header-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	@include mixins.flex($justify: center, $align: center);
+	gap: 2rem;
+}
+
+.Header-user {
+	@include mixins.flex($justify: center, $align: center);
+	gap: 1rem;
+}
