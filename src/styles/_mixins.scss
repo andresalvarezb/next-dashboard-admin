@@ -1,5 +1,19 @@
-@mixin flex-center($justify) {
+@use 'variables';
+
+@mixin viewport($size) {
+	@media screen and (max-width: $size) {
+		@content;
+	}
+}
+
+@mixin flex(
+	$direction: row,
+	$wrap: nowrap,
+	$justify: flex-start,
+	$align: stretch
+) {
 	display: flex;
-	align-items: center;
+	flex-flow: $direction $wrap;
 	justify-content: $justify;
+	align-items: $align;
 }

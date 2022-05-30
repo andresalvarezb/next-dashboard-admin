@@ -1,9 +1,9 @@
-$color-1: #F24B88;
-$color-1-1: #fcc3d8;
-$color-2: #5317A6;
+$color-1: #f24b88;
+$color-1-1: #fbe0ea;
+$color-2: #5317a6;
 $color-3: #363159;
-$color-4: #3BD9AC;
-$color-5: #F26363;
+$color-4: #3bd9ac;
+$color-5: #f26363;
 
 // :export {
 //   color1: $color-1;
@@ -12,3 +12,7 @@ $color-5: #F26363;
 //   color4: $color-4;
 //   color5: $color-5;
 // }
+
+$vw-movil: 480px;
+$vw-tablet: 760px;
+$vw-desktop: 1100px;
