@@ -2,20 +2,23 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@icons/logo.png';
 import React, { useRef } from 'react';
-import styles from '@styles/Login.module.scss';
+import { useRouter } from 'next/router';
 import { useAuth } from '@hooks/useAuth';
+import styles from '@styles/Login.module.scss';
 
 function Login() {
 	const emailRef = useRef(null);
 	const passwordRef = useRef(null);
 	const auth = useAuth();
+	const router = useRouter();
 
 	const submitHandle = (e) => {
 		e.preventDefault();
 		const email = emailRef.current.value;
 		const password = passwordRef.current.value;
-		auth.signIn(email, password).then((res) => {
-			console.log('[LOGIN SUCCESS]', res);
+		auth.signIn(email, password).then(() => {
+			console.log('[LOGIN SUCCESS]');
+			router.push('/dashboard');
 		});
 	};
 
