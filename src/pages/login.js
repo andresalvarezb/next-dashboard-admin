@@ -1,10 +1,19 @@
-import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@icons/logo.png';
+import React, { useRef } from 'react';
 import styles from '@styles/Login.module.scss';
 
 function Login() {
+	const emailRef = useRef(null);
+	const passwordRef = useRef(null);
+
+	const submitHandle = (e) => {
+		e.preventDefault();
+		const email = emailRef.current.value;
+		const password = passwordRef.current.value;
+	};
+
 	return (
 		<>
 			<div className={styles.Login}>
@@ -16,9 +25,19 @@ function Login() {
 							Or <span>start your 14-day free trial</span>
 						</p>
 					</header>
-					<form className={styles.form}>
-						<input type='email' name='email' placeholder='Email address' />
-						<input type='password' name='password' placeholder='Password' />
+					<form className={styles.form} onSubmit={submitHandle}>
+						<input
+							type='email'
+							name='email'
+							placeholder='Email address'
+							ref={emailRef}
+						/>
+						<input
+							type='password'
+							name='password'
+							placeholder='Password'
+							ref={passwordRef}
+						/>
 						<div className={styles['container-checkbox']}>
 							<label>
 								<input type='checkbox' name='checkbox' />
