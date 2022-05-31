@@ -3,15 +3,20 @@ import Image from 'next/image';
 import Logo from '@icons/logo.png';
 import React, { useRef } from 'react';
 import styles from '@styles/Login.module.scss';
+import { useAuth } from '@hooks/useAuth';
 
 function Login() {
 	const emailRef = useRef(null);
 	const passwordRef = useRef(null);
+	const auth = useAuth();
 
 	const submitHandle = (e) => {
 		e.preventDefault();
 		const email = emailRef.current.value;
 		const password = passwordRef.current.value;
+		auth.signIn(email, password).then((res) => {
+			console.log('[LOGIN SUCCESS]', res);
+		});
 	};
 
 	return (
