@@ -10,7 +10,13 @@
             ],
             "@icons/*": [
                 "assets/icons/*"
-            ]
+            ],
+            "@hooks/*": [
+                "hooks/*"
+            ],
+            "@services/*": [
+                "services/*"
+            ],
         }
     }
 }
