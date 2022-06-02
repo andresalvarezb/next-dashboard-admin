@@ -8,7 +8,7 @@ function MainLayout({ children }) {
 			<div className={''}>
 				<main>
 					<Header />
-					<Nav />
+					{/* <Nav /> */}
 					<div className={''}>{children}</div>
 				</main>
 			</div>
