@@ -1,0 +1,56 @@
+@use 'variables';
+
+.Dashboard {
+	font-size: 1.6rem;
+	text-align: left;
+	margin: 2rem auto;
+}
+
+.table {
+	margin: auto;
+	width: 90%;
+	max-width: 1000px;
+	border: thin solid rgb(203, 203, 203);
+	border-radius: 0.5rem;
+	border-collapse: collapse;
+	// padding: 1rem;
+	font-family: Arial, Helvetica, sans-serif;
+
+	th,
+	td {
+		padding: 1rem;
+	}
+
+	tr {
+		border: thin solid rgb(203, 203, 203);
+	}
+}
+
+.titles {
+	th {
+		text-transform: capitalize;
+		opacity: 0.9;
+	}
+}
+
+.product {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.product-price {
+	div {
+		width: fit-content;
+		background-color: rgb(202, 239, 202);
+		color: green;
+		font-weight: 600;
+		padding: 0.5rem;
+		border-radius: 20%;
+	}
+}
+.edit-product {
+	color: variables.$color-2;
+	font-weight: 700;
+}
